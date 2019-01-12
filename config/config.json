@@ -1,6 +1,0 @@
-{
-  "port": 3000,
-  "root": "/public",
-  "gitRepositoryUrl": "https://github.com/melocotton/unicorn.git",
-  "gitDeployBranch": "master"
-}
