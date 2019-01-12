@@ -37,10 +37,10 @@ gulp.task("default", gulp.series(['clean', 'sass', 'uglify']), function () {
 
 });
 
-// gulp.task('deploy', function() {
-//     return gulp.src('./dist/**/*')
-//         .pipe(ghPages());
-// });
+gulp.task('deploy', function () {
+    return gulp.src("./dist/**/*")
+        .pipe(deploy())
+});
 
 // copy all the necessary files to prod directory
 gulp.task('copy', function () {
@@ -59,10 +59,10 @@ gulp.task('copy', function () {
 });
 
 // push the codes to the Master branch on GitHub
-gulp.task('deploy', gulp.series(['copy']), function () {
-    return gulp.src("./prod/**/*")
-        .pipe(deploy({
-            remoteUrl: config.gitRepositoryUrl,
-            branch: config.gitDeployBranch
-        }))
-});
+// gulp.task('deploy', gulp.series(['copy']), function () {
+//     return gulp.src("./prod/**")
+//         .pipe(deploy({
+//             remoteUrl: config.gitRepositoryUrl,
+//             branch: config.gitDeployBranch
+//         }))
+// });
