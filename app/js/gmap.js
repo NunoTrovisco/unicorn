@@ -193,9 +193,9 @@ function initMapLocation() {
         '</div>'+
         '<h1  id="firstHeading" class="firstHeading">Pictet Technologies</h1>'+
         '<div class="font" id="bodyContent">'+
-        '<p>Pictet Technologies SA (Bloc D, level 4) ' +
+        '<h5>Pictet Technologies SA (Bloc D, level 4) ' +
         '3, Avenue de la Fonte ' +
-        'L-4364 Esch-sur-Alzette</p>' +
+        'L-4364 Esch-sur-Alzette</h5>' +
         '</div></div>';
 
     var infowindow = new google.maps.InfoWindow({
