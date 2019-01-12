@@ -1,7 +1,0 @@
-# Created by .ignore support plugin (hsz.mobi)
-/node_modules
-/.idea
-/*.iml
-/app/lib/bundle.min.js
-/app/css/index.css
-/app/css/index-v2.css
