@@ -1,10 +1,13 @@
 var gulp = require('gulp');
-var ghPages = require('gulp-gh-pages');
 var sass = require('gulp-sass');
 var pump = require('pump');
 var clean = require('gulp-clean');
 var uglify = require('gulp-uglify-es').default;
 var concat = require('gulp-concat');
+var deploy = require('gulp-gh-pages');
+var copy = require('gulp-copy');
+var config = require('./config/config.json');
+
 sass.compiler = require('node-sass');
 
 gulp.task("uglify", function () {
@@ -40,7 +43,7 @@ gulp.task("default", gulp.series(['clean', 'sass', 'uglify']), function () {
 // });
 
 // copy all the necessary files to prod directory
-gulp.task('copy', function() {
+gulp.task('copy', function () {
     var sourceFiles = [
         'config/*',
         'app/index.html',
@@ -48,18 +51,18 @@ gulp.task('copy', function() {
         'app/lib/*',
         'app/css/*',
         'app/assets/**',
-        'package.json']
-    var destination = 'prod/'
+        'package.json'];
+    var destination = 'prod/';
 
     return gulp.src(sourceFiles)
-        .pipe(copy(destination))
-})
+        .pipe(copy(destination));
+});
 
 // push the codes to the Master branch on GitHub
-gulp.task('deploy', ['copy'], function () {
+gulp.task('deploy', gulp.series(['copy']), function () {
     return gulp.src("./prod/**/*")
         .pipe(deploy({
             remoteUrl: config.gitRepositoryUrl,
             branch: config.gitDeployBranch
         }))
-})
+});
