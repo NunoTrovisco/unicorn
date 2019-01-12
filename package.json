@@ -2,9 +2,12 @@
   "name": "ptlwebsite",
   "version": "1.0.0",
   "description": "ptl website",
+  "homepage": "https://melocotton.github.io/unicorn"
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "gulp default",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +21,8 @@
     "node-sass": "^4.11.0"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "jquery-parallax.js": "^1.5.0"
   }
+
 }
