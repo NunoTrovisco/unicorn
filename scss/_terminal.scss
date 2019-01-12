@@ -1,0 +1,9 @@
+.terminal-wrapper {
+  @extend .ml-2, .mt-2;
+}
+
+.terminal, .cmd, .terminal .terminal-output div div, .cmd .prompt {
+  font-size: 18px;
+  line-height: 20px;
+  --size: 1.5;
+}
