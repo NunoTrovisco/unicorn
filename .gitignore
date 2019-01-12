@@ -5,5 +5,4 @@
 /app/lib/bundle.min.js
 /app/css/index.css
 /app/css/index-v2.css
-/prod/
-/dist/
+/.publish/
