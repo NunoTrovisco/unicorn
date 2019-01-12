@@ -21,6 +21,11 @@ h2 {
   font-size: 2em;
 }
 
+h3 {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -34,4 +39,30 @@ img {
   width: 100%;
   height: 500px;
   background-color: grey;
+}
+
+#map-people {
+  width: 100%;
+  height: 500px;
+  background-color: grey;
+}
+
+.section-text {
+  @extend .bg-grey;
+
+  p {
+    line-height: 1.9rem;
+  }
+}
+
+.animated-text {
+  @include transition(all linear 0.5s 1s);
+}
+
+.hideme {
+  opacity: 0;
+}
+
+.showme {
+  opacity: 1;
 }
