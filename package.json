@@ -2,12 +2,9 @@
   "name": "ptlwebsite",
   "version": "1.0.0",
   "description": "ptl website",
-  "homepage": "https://melocotton.github.io/unicorn",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "gulp default",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -16,13 +13,12 @@
     "gulp": "^4.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^4.0.2",
     "gulp-uglify-es": "^1.0.4",
     "node-sass": "^4.11.0"
   },
   "dependencies": {
-    "gh-pages": "^2.0.1",
     "jquery-parallax.js": "^1.5.0"
   }
-
 }

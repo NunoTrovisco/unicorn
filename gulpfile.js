@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
 var sass = require('gulp-sass');
 var pump = require('pump');
 var clean = require('gulp-clean');
@@ -30,4 +31,10 @@ gulp.task('watch', function () {
 
 
 gulp.task("default", gulp.series(['clean', 'sass', 'uglify']), function () {
+
+});
+
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
 });
