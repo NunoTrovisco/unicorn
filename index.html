@@ -44,7 +44,7 @@
     <!-- HEADER WITH VIDEO-->
     <header>
         <div class="overlay"></div>
-        <video autoplay loop muted playsinline>
+        <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
             <source src="assets/videos/ptl-intro.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
             <source src="assets/videos/ptl-intro.webm" type='video/webm; codecs="vp8, vorbis"'/>
             <!--<img src="/images/product/product-parent-hero.jpg" title="Your browser does not support the <video> tag">-->
@@ -405,30 +405,21 @@
                 <div class="col-md-12">
                     <div id="map"></div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- SECTION 8-->
-    <section class="d-md-none d-lg-block" id="ptl-terminal">
-    </section>
-
-
-    <section class="d-sm-block d-lg-none" id="ptl-apply-form">
-        <div class="form-group">
-            <label for="applicant-email">Email address</label>
-            <input class="form-control" id="applicant-email" placeholder="Enter email" type="email">
+    <section>
+        <div class="window shadow">
+            <div class="titlebar">
+                Console
+            </div>
+            <div class="content">
+                <section class="d-md-none d-lg-block" id="ptl-terminal">
+                </section>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="applicant-first-name">First name</label>
-            <input class="form-control" id="applicant-first-name" placeholder="First name" type="text">
-        </div>
-        <div class="form-group">
-            <label for="applicant-first-name">Last name</label>
-            <input class="form-control" id="applicant-last-name" placeholder="Last name" type="text">
-        </div>
-        <button class="btn btn-primary" type="submit">Apply</button>
     </section>
 
     <section class="bg-grey-darker footer">
@@ -436,6 +427,7 @@
             <div class="row">
                 <div class="col-md-2 m-0 py-3">
                     <p class="text-white m-0"><i class="fa fa-copyright"></i> Pictet Technologies 2019</p>
+                    <p class="text-white m-0"> <i class="fa fa-copyright"></i> Pictet-Technologies 2019</p>
                 </div>
                 <div class="col-md-8 text-center  py-3">
                     <a href="https://www.linkedin.com/company/pictet-technologies-sa/" target="_blank" title="Linkedin"
