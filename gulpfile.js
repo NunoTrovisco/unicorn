@@ -38,31 +38,6 @@ gulp.task("default", gulp.series(['clean', 'sass', 'uglify']), function () {
 });
 
 gulp.task('deploy', function () {
-    return gulp.src("./dist/**/*")
+    return gulp.src("./app/**/*")
         .pipe(deploy())
 });
-
-// copy all the necessary files to prod directory
-gulp.task('copy', function () {
-    var sourceFiles = [
-        'config/*',
-        'app/index.html',
-        'app/js/*',
-        'app/lib/*',
-        'app/css/*',
-        'app/assets/**',
-        'package.json'];
-    var destination = 'prod/';
-
-    return gulp.src(sourceFiles)
-        .pipe(copy(destination));
-});
-
-// push the codes to the Master branch on GitHub
-// gulp.task('deploy', gulp.series(['copy']), function () {
-//     return gulp.src("./prod/**")
-//         .pipe(deploy({
-//             remoteUrl: config.gitRepositoryUrl,
-//             branch: config.gitDeployBranch
-//         }))
-// });
