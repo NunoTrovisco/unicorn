@@ -11,7 +11,7 @@ var config = require('./config/config.json');
 sass.compiler = require('node-sass');
 
 gulp.task("uglify", function () {
-    return gulp.src("./app/js/*.js")
+    return gulp.src(["./app/js/gmap.js", "./app/js/main.js", "./app/js/terminal.js"])
         .pipe(concat("bundle.min.js"))
         .pipe(uglify(/* options */))
         .pipe(gulp.dest("./app/lib/"));
