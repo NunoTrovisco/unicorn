@@ -7,6 +7,7 @@ var concat = require('gulp-concat');
 var deploy = require('gulp-gh-pages');
 var copy = require('gulp-copy');
 var config = require('./config/config.json');
+var nunjucksRender = require('gulp-nunjucks-render');
 
 sass.compiler = require('node-sass');
 
@@ -40,4 +41,16 @@ gulp.task("default", gulp.series(['clean', 'sass', 'uglify']), function () {
 gulp.task('deploy', function () {
     return gulp.src("./app/**/*")
         .pipe(deploy())
+});
+
+
+gulp.task('nunjucks', function() {
+    // Gets .html and .nunjucks files in pages
+    return gulp.src('app/pages/**/*.+(html|nunjucks)')
+    // Renders template with nunjucks
+        .pipe(nunjucksRender({
+            path: ['app/templates']
+        }))
+        // output files in app folder
+        .pipe(gulp.dest('app'))
 });
