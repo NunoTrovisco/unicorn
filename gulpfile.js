@@ -31,6 +31,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('./app/js/*.js', gulp.series('uglify'));
     gulp.watch('./app/scss/*.scss', gulp.series('sass'));
+    gulp.watch('./app/templates', gulp.series('nunjucks'));
 });
 
 
